@@ -9,14 +9,19 @@ const UserSchema = mongoose.Schema({
 	password: {
 		type: String,
 		require: true,
+		trim: true,
 	},
 	email: {
 		type: String,
 		require: true,
 	},
-	isAdmin: {
-		type: Boolean,
-		default: false,
+	role: {
+		type: String,
+		default: 'user',
+	},
+	date: {
+		type: Date,
+		default: Date.now(),
 	},
 })
 

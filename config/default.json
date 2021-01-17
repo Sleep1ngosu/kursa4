@@ -1,3 +1,4 @@
 {
-	"mongoURI": "mongodb+srv://Sleep1ngOsu:lvbnhbq550281@cluster0.20wzs.mongodb.net/kursa4?retryWrites=true&w=majority"
+	"mongoURI": "mongodb+srv://Sleep1ngOsu:lvbnhbq550281@cluster0.20wzs.mongodb.net/kursa4?retryWrites=true&w=majority",
+	"jwtSecret": "b30bca22e63d8d0ab2fc9cafd1acb373f4a6d60b4e9fad001f3f6cdbb0c6d5b6a36f0c01d165342b0fd5e79f480348f9114881ea9fababf0a919655a9647be55"
 }
