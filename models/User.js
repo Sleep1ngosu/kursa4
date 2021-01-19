@@ -19,6 +19,11 @@ const UserSchema = mongoose.Schema({
 		type: String,
 		default: 'user',
 	},
+	language: {
+		type: String,
+		enum: ['en', 'ru'],
+		default: 'en',
+	},
 	date: {
 		type: Date,
 		default: Date.now(),

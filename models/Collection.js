@@ -1,7 +1,12 @@
 const mongoose = require('mongoose')
+const crypto = require('crypto')
 
 const CollectionSchema = mongoose.Schema({
-	ref: {
+	id: {
+		type: String,
+		default: crypto.randomBytes(32).toString('hex'),
+	},
+	owner: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'users',
 	},
@@ -18,7 +23,7 @@ const CollectionSchema = mongoose.Schema({
 		type: String,
 	},
 	image: {
-		type: String,
+		type: Object,
 	},
 })
 

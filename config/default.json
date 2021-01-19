@@ -1,4 +1,8 @@
 {
 	"mongoURI": "mongodb+srv://Sleep1ngOsu:lvbnhbq550281@cluster0.20wzs.mongodb.net/kursa4?retryWrites=true&w=majority",
-	"jwtSecret": "b30bca22e63d8d0ab2fc9cafd1acb373f4a6d60b4e9fad001f3f6cdbb0c6d5b6a36f0c01d165342b0fd5e79f480348f9114881ea9fababf0a919655a9647be55"
+	"jwtSecret": "b30bca22e63d8d0ab2fc9cafd1acb373f4a6d60b4e9fad001f3f6cdbb0c6d5b6a36f0c01d165342b0fd5e79f480348f9114881ea9fababf0a919655a9647be55",
+	"cloud_name": "sleep1ngosu-cloud",
+	"API_Key": "211382834759625",
+	"API_Secret": "gMKU_EFWR5IgXjd3hv63pYaTue8",
+	"StorageID": "2a278734446f6370ad4e5a5fb44acbedcdfaa1deabfc1099c0475c703a95c612fac6c9c35b655197d7c3afe03416fb988a9517afc516e4ee5af3304fb391693f"
 }
