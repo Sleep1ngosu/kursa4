@@ -1,0 +1,54 @@
+.header__notAuth {
+	&__usable {
+		display: grid;
+		grid-template-columns: 15rem 6fr 5.5fr;
+		grid-template-rows: 1fr;
+		width: 100rem;
+		height: 100%;
+
+		&__logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		&__username,
+		&__password,
+		&__button {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		&__registration {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			margin-left: 2rem;
+			margin-right: 2rem;
+			background-color: #f8f2ce;
+
+			&__image {
+				display: inline-block;
+				cursor: pointer;
+			}
+		}
+
+		&__form {
+			display: grid;
+			grid-template-columns: 2fr 2fr 1.5fr;
+			grid-template-rows: 1fr 0.5fr;
+		}
+
+		&__error {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			grid-column-start: 1;
+			grid-column-end: 3;
+			font-size: 1.5rem;
+		}
+	}
+}

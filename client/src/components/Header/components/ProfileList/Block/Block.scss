@@ -1,0 +1,16 @@
+.profileList__block {
+	&__wrapper {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: 2rem;
+
+		&:hover {
+			background-color: rgb(219, 219, 219);
+			cursor: pointer;
+		}
+	}
+	font-size: 1.8rem;
+	color: #474747;
+	font-family: 'Lato', sans-serif;
+}

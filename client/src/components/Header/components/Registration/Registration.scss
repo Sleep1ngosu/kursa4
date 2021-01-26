@@ -1,0 +1,77 @@
+.registration {
+	position: absolute;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr 0.7fr;
+	grid-template-columns: 1fr;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 8rem;
+	width: 40.6rem;
+	// height: 50rem;
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+		color: #8d7f42;
+		font-weight: bold;
+	}
+
+	&__button__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__social-network-list {
+		display: grid;
+		grid-template-columns: 3fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		background-color: #464545;
+
+		&__title {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			color: white;
+		}
+
+		&__facebook,
+		&__gmail,
+		&__github {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__active {
+		height: 50rem;
+		background-color: #f4f2e9;
+		transition: 1s;
+		opacity: 1;
+	}
+
+	&__notActive {
+		opacity: 0;
+		height: 0;
+		transition: 1s;
+	}
+}
+
+.facebook__icon,
+.gmail__icon,
+.github__icon {
+	width: 3rem;
+	cursor: pointer;
+}
+
+.registration__alertMessage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+}

@@ -4,5 +4,9 @@
 	"cloud_name": "sleep1ngosu-cloud",
 	"API_Key": "211382834759625",
 	"API_Secret": "gMKU_EFWR5IgXjd3hv63pYaTue8",
-	"StorageID": "2a278734446f6370ad4e5a5fb44acbedcdfaa1deabfc1099c0475c703a95c612fac6c9c35b655197d7c3afe03416fb988a9517afc516e4ee5af3304fb391693f"
+	"StorageID": "2a278734446f6370ad4e5a5fb44acbedcdfaa1deabfc1099c0475c703a95c612fac6c9c35b655197d7c3afe03416fb988a9517afc516e4ee5af3304fb391693f",
+	"CLIENT_ID_FACEBOOK": "418769056118651",
+	"CLIENT_SECRET_FACEBOOK": "cfcc59aeef5142e7b9f7f8522744bc89",
+	"admin_name": "admin",
+	"admin_pass": "admin"
 }

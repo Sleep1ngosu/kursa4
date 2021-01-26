@@ -1,0 +1,26 @@
+.header__auth__profileList {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1.5fr 1fr 1fr;
+	position: absolute;
+	right: 0;
+	width: 25rem;
+	height: 20rem;
+	background-color: #fff;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	// padding-left: 2rem;
+	// padding-right: 2rem;
+
+	&__username {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2.4rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		border-bottom: 0.1rem solid gray;
+		font-family: 'Lato', sans-serif;
+		font-weight: bold;
+		color: #6d6767;
+	}
+}

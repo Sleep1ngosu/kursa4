@@ -1,0 +1,39 @@
+.header__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 8rem;
+	height: 3rem;
+	border: none;
+	border-radius: 1rem;
+	transition: 0.3s;
+	background-color: #492a14;
+	color: white;
+	cursor: pointer;
+	outline: none;
+
+	&:hover {
+		transition: 0.3s;
+		background-color: #6d4528;
+	}
+}
+
+.registration__button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 12rem;
+	height: 4rem;
+	border: none;
+	border-radius: 0.5rem;
+	transition: 0.3s;
+	background-color: #633e24;
+	color: white;
+	outline: none;
+	cursor: pointer;
+
+	&:hover {
+		transition: 0.3s;
+		background-color: #9c5c2f;
+	}
+}

@@ -1,0 +1,21 @@
+.registration {
+	&__block {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 1fr;
+
+		&__label {
+			display: flex;
+			padding-left: 3rem;
+			align-items: center;
+			font-size: 2rem;
+			color: #7a703b;
+		}
+
+		&__input {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

@@ -28,6 +28,8 @@ const UserSchema = mongoose.Schema({
 		type: Date,
 		default: Date.now(),
 	},
+	facebookId: String,
+	googleId: String,
 })
 
 module.exports = user = mongoose.model('users', UserSchema)
