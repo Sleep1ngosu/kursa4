@@ -1,14 +1,11 @@
-const mongoose = require('mongoose')
-const crypto = require('crypto')
+const mongoose = require("mongoose");
+const crypto = require("crypto");
 
 const CollectionSchema = mongoose.Schema({
-	id: {
-		type: String,
-		default: crypto.randomBytes(32).toString('hex'),
-	},
+	id: String,
 	owner: {
 		type: mongoose.Schema.Types.ObjectId,
-		ref: 'users',
+		ref: "users",
 	},
 	name: {
 		type: String,
@@ -47,6 +44,6 @@ const CollectionSchema = mongoose.Schema({
 		text_2: String,
 		text_3: String,
 	},
-})
+});
 
-module.exports = Collection = mongoose.model('collections', CollectionSchema)
+module.exports = Collection = mongoose.model("collections", CollectionSchema);

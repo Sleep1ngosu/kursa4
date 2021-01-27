@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Block from './Block/Block'
 
 const ProfileList = (props) => {
-	const texts = ['Profile', 'Logout']
+	const texts = ['Profile', 'My collections', 'Logout']
 
 	const blockList = texts.map((text, index) => {
 		return (
@@ -12,6 +12,7 @@ const ProfileList = (props) => {
 				key={`header__auth__profileList__${index}`}
 				text={text}
 				index={index}
+				toggleDropdown={props.toggleDropdown}
 			/>
 		)
 	})

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './AuthenticatedHeader.scss'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import logo from '../../../../assets/Images/logo.png'
 import SearchIcon from '@material-ui/icons/Search'
 import profileIcon from '../../../../assets/Icons/profile.png'
@@ -19,15 +20,21 @@ const AuthenticatedHeader = (props) => {
 
 	return (
 		<div className="header__auth__usable">
-			<div className="header__auth__usable__logo">
-				<img src={logo} alt="logo" />
-			</div>
-			<div className="header__auth__usable__news header__auth__usable__text">
-				News
-			</div>
-			<div className="header__auth__usable__myCollections header__auth__usable__text">
-				My collections
-			</div>
+			<Link to="/" style={{ textDecoration: 'none' }}>
+				<div className="header__auth__usable__logo">
+					<img src={logo} alt="logo" />
+				</div>
+			</Link>
+			<Link to="/news" style={{ textDecoration: 'none' }}>
+				<div className="header__auth__usable__news header__auth__usable__text">
+					News
+				</div>
+			</Link>
+			<Link to="/collections" style={{ textDecoration: 'none' }}>
+				<div className="header__auth__usable__myCollections header__auth__usable__text">
+					Collections
+				</div>
+			</Link>
 			<div className="header__auth__usable__search">
 				<div className="header__auth__usable__search__wrapper">
 					<input
@@ -50,7 +57,10 @@ const AuthenticatedHeader = (props) => {
 						alt="profile icon"
 					/>
 				</div>
-				<ProfileList style={profileDropdownStyle} />
+				<ProfileList
+					toggleDropdown={toggleProfileDropdown}
+					style={profileDropdownStyle}
+				/>
 			</div>
 		</div>
 	)

@@ -1,28 +1,57 @@
-import { SUCCESS_ALERT, CLEAR_ALERT, ERROR_ALERT } from '../actions/types'
+import {
+	REGISTRATION_FAILED,
+	LOGIN_FAILED,
+	CLEAR_LOGIN_ALERT,
+	CLEAR_REGISTRATION_ALERT,
+} from '../actions/types'
 
 const initialState = {
-	message: '',
-	color: '',
+	registration: {
+		message: '',
+		color: '',
+	},
+	login: {
+		message: '',
+		color: '',
+	},
 }
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case SUCCESS_ALERT: {
+		case REGISTRATION_FAILED: {
 			return {
-				message: action.payload,
-				color: 'green',
+				...state,
+				registration: {
+					message: action.payload,
+					color: 'red',
+				},
 			}
 		}
-		case ERROR_ALERT: {
+		case LOGIN_FAILED: {
 			return {
-				message: action.payload,
-				color: 'red',
+				...state,
+				login: {
+					message: action.payload,
+					color: 'red',
+				},
 			}
 		}
-		case CLEAR_ALERT: {
+		case CLEAR_LOGIN_ALERT: {
 			return {
-				message: '',
-				color: '',
+				...state,
+				login: {
+					message: '',
+					color: '',
+				},
+			}
+		}
+		case CLEAR_REGISTRATION_ALERT: {
+			return {
+				...state,
+				registration: {
+					message: '',
+					color: '',
+				},
 			}
 		}
 		default:

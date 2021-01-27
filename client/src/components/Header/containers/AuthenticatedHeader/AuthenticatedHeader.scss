@@ -10,15 +10,18 @@
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
+		height: 100%;
 	}
 
 	&__myCollections,
+	&__collections,
 	&__news,
 	&__search,
 	&__profile {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		height: 100%;
 	}
 
 	&__news {

@@ -11,5 +11,6 @@ export const getUser = async (token) => {
 	return {
 		username: response.data.user.username,
 		role: response.data.user.role,
+		id: response.data.user.id,
 	}
 }

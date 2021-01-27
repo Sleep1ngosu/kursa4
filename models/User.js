@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
+const crypto = require('crypto')
 
 const UserSchema = mongoose.Schema({
+	id: {
+		type: String,
+		default: crypto.randomBytes(16).toString('hex'),
+	},
 	username: {
 		type: String,
 		require: true,

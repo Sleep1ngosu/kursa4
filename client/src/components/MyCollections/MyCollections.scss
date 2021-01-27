@@ -1,0 +1,46 @@
+.myCollections {
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 8rem 31rem 31rem 5rem;
+		width: 100rem;
+		height: 75rem;
+		margin: 0 auto;
+		margin-top: 5rem;
+		background-color: #ece2d8;
+		border-radius: 3rem;
+	}
+
+	&__title {
+		display: grid;
+		grid-template-columns: 8fr 1fr;
+		grid-template-rows: 1fr;
+		border-bottom: 0.1rem solid #a5a5a5;
+
+		&__text {
+			display: flex;
+			align-items: center;
+			font-size: 3rem;
+			font-family: 'Lato', sans-serif;
+			padding-left: 3rem;
+			color: #4e4c4b;
+		}
+
+		&__icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-left: 0.1rem solid #a5a5a5;
+			border-top-right-radius: 3rem;
+			cursor: pointer;
+
+			&__icon {
+				width: 5rem;
+			}
+
+			&:hover {
+				background-color: #c3a182;
+			}
+		}
+	}
+}

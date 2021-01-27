@@ -86,7 +86,10 @@ const NotAuthenticatedHeader = ({ login, logout }) => {
 						text="Sign in"
 					/>
 				</div>
-				<ErrorBlock className="header__notAuth__usable__error" />
+				<ErrorBlock
+					type="login"
+					className="header__notAuth__usable__error"
+				/>
 			</form>
 			{/* <button onClick={logout}>LOGOUT</button> */}
 		</div>

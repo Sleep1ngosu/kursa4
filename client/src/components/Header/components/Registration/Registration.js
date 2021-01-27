@@ -9,7 +9,7 @@ import gmail from '../../../../assets/Icons/gmail.png'
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import GoogleLogin from 'react-google-login'
 import { signup } from '../../../../redux/actions/auth'
-import { setErrorAlert } from '../../../../redux/actions/alert'
+import { setErrorRegistrationAlert } from '../../../../redux/actions/alert'
 import ErrorBlock from '../ErrorBlock/ErrorBlock'
 
 const Registration = (props) => {
@@ -26,7 +26,7 @@ const Registration = (props) => {
 	const onSubmit = (e) => {
 		e.preventDefault()
 		if (formData.password !== formData.password2) {
-			props.setErrorAlert('password do not match')
+			props.setErrorRegistrationAlert('password do not match')
 			console.log('password do not match')
 		} else {
 			props.signup(formData)
@@ -63,7 +63,10 @@ const Registration = (props) => {
 				/>
 			</div>
 			<div>
-				<ErrorBlock className="registration__alertMessage" />
+				<ErrorBlock
+					type="registration"
+					className="registration__alertMessage"
+				/>
 			</div>
 			<div className="registration__social-network-list">
 				<div className="registration__social-network-list__title">
@@ -105,4 +108,6 @@ const Registration = (props) => {
 	)
 }
 
-export default connect(null, { signup, setErrorAlert })(Registration)
+export default connect(null, { signup, setErrorRegistrationAlert })(
+	Registration
+)

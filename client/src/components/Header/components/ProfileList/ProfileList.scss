@@ -1,15 +1,14 @@
 .header__auth__profileList {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1.5fr 1fr 1fr;
+	grid-template-rows: 1.5fr 1fr 1fr 1fr;
 	position: absolute;
 	right: 0;
 	width: 25rem;
-	height: 20rem;
+	height: 30rem;
 	background-color: #fff;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-	// padding-left: 2rem;
-	// padding-right: 2rem;
+	z-index: 2;
 
 	&__username {
 		display: flex;
