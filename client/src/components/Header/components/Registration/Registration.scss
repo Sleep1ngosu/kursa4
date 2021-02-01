@@ -48,6 +48,7 @@
 	}
 
 	&__active {
+		// display: blaock;
 		height: 50rem;
 		background-color: #f4f2e9;
 		transition: 1s;
@@ -55,9 +56,10 @@
 	}
 
 	&__notActive {
-		opacity: 0;
+		// display: noane;
 		height: 0;
 		transition: 1s;
+		opacity: 0;
 	}
 }
 

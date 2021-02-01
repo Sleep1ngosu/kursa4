@@ -1,0 +1,15 @@
+.myCollections__pages {
+	&__prev {
+		display: flex;
+		align-items: center;
+		padding-left: 2rem;
+		padding-bottom: 1rem;
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		&__icon {
+			width: 4rem;
+			cursor: pointer;
+		}
+	}
+}

@@ -6,21 +6,18 @@ import { setupMyCollectionsList } from '../../helpers/lists/setupMyCollectionsLi
 import addIcon from '../../assets/Icons/add.png'
 import ErrorComponent from './components/ErrorComponent/ErrorComponent'
 import Collections from './containers/Collections/Collections'
+import { get_last_url_element } from '../../helpers/url/getLastUrlElement'
+import { showCreateCollection } from '../../redux/actions/createCollection'
+import { setUnclickedBlocker } from '../../redux/actions/blocker'
 
 const MyCollections = (props) => {
 	const [collections, setColletcions] = useState(null)
 	const [errorMessage, setErrorMessage] = useState(null)
 	const [maxPage, setMaxPage] = useState(null)
-	let [page, setPage] = useState(
-		window.location.pathname.split('/')[
-			window.location.pathname.split('/').length - 1
-		]
-	)
-
+	let [page, setPage] = useState(get_last_url_element())
 	if (!+page) {
 		setPage(1)
 	}
-
 	useEffect(() => {
 		const fetchData = async () => {
 			if (props.username) {
@@ -34,11 +31,16 @@ const MyCollections = (props) => {
 			}
 		}
 		fetchData()
-	}, [props.username, page])
+	}, [props.username, page, props.updateTrigger])
 
 	let collectionsList = []
 	if (collections) {
 		collectionsList = setupMyCollectionsList(collections)
+	}
+
+	const onClickAddIcon = () => {
+		props.showCreateCollection()
+		props.setUnclickedBlocker()
 	}
 
 	let renderedComponent
@@ -61,7 +63,10 @@ const MyCollections = (props) => {
 				<div className="myCollections__title__text">
 					My Collections:
 				</div>
-				<div className="myCollections__title__icon">
+				<div
+					onClick={onClickAddIcon}
+					className="myCollections__title__icon"
+				>
 					<img
 						className="myCollections__title__icon__icon"
 						src={addIcon}
@@ -77,7 +82,11 @@ const MyCollections = (props) => {
 const mapStateToProps = (state) => {
 	return {
 		username: state.user.user.username,
+		updateTrigger: state.createCollection.updateTrigger,
 	}
 }
 
-export default connect(mapStateToProps, null)(MyCollections)
+export default connect(mapStateToProps, {
+	showCreateCollection,
+	setUnclickedBlocker,
+})(MyCollections)

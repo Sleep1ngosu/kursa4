@@ -11,10 +11,7 @@ const CollectionBlock = (props) => {
 	// }
 
 	return (
-		<Link
-			to={`/collections/${props.id}`}
-			style={{ textDecoration: 'none' }}
-		>
+		<Link to={`/collection/${props.id}`} style={{ textDecoration: 'none' }}>
 			<div className="collectionBlock__wrapper">
 				<div className="collectionBlock__image">
 					<Image

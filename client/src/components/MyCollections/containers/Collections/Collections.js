@@ -4,6 +4,10 @@ import left_arrow from '../../../../assets/Icons/left_arrow.png'
 import right_arrow from '../../../../assets/Icons/right_arrow.png'
 import search from '../../../../assets/Icons/search.png'
 import history from '../../../../history/history'
+import PrevPage from './components/PrevPage/PrevPage'
+import NextPage from './components/NextPage/NextPage'
+import InputPage from './components/InputPage/InputPage'
+import Button from './components/Button/Button'
 
 const Collections = (props) => {
 	const onSubmit = (e) => {
@@ -35,47 +39,10 @@ const Collections = (props) => {
 				onSubmit={(e) => onSubmit(e)}
 				className="myCollections__pages"
 			>
-				<div className="myCollections__pages__prev">
-					<img
-						className="myCollections__pages__prev__icon"
-						src={left_arrow}
-						alt="left arrow"
-						onClick={prev}
-					/>
-				</div>
-				<div className="myCollections__pages__inputPage__wrapper">
-					<input
-						className="myCollections__pages__inputPage"
-						type="number"
-						required
-						name="page"
-						min="1"
-						max={props.maxPage}
-					/>
-				</div>
-				<div className="myCollections__pages__button__wrapper">
-					<button
-						className="myCollections__pages__button"
-						type="submit"
-					>
-						<img
-							className="myCollections__pages__button__icon"
-							src={search}
-							alt="search icon"
-						/>
-					</button>
-					<span className="myCollections__pages__button__text">
-						{props.page}/{props.maxPage}
-					</span>
-				</div>
-				<div className="myCollections__pages__next">
-					<img
-						className="myCollections__pages__next__icon"
-						src={right_arrow}
-						alt="left arrow"
-						onClick={next}
-					/>
-				</div>
+				<PrevPage icon={left_arrow} onClick={prev} />
+				<InputPage max={props.maxPage} />
+				<Button page={props.page} maxPage={props.maxPage} />
+				<NextPage icon={right_arrow} onClick={next} />
 			</form>
 		</Fragment>
 	)

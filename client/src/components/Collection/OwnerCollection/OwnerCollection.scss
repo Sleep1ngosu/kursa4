@@ -1,0 +1,45 @@
+.collection__ownerCollection {
+	&__wrapper {
+		position: relative;
+		width: 100rem;
+		height: 70rem;
+		display: grid;
+		grid-template-columns: 28.6rem 1fr;
+		grid-template-rows: 10fr 1fr;
+	}
+
+	&__collectionInfo {
+		max-width: 28.6rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 28.6rem 1fr;
+		font-family: 'Roboto Condensed', sans-serif;
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			max-width: 28.6rem;
+		}
+
+		&__footer {
+			display: grid;
+			grid-template-columns: 1fr 0.7fr;
+			grid-template-rows: 1fr;
+			min-height: 8rem;
+			font-size: 1.3rem;
+			color: #818181;
+			font-weight: 300;
+			padding-top: 2rem;
+			padding-left: 2rem;
+		}
+	}
+
+	// &__items {
+	// 	padding: 2rem 7rem 2rem 7rem;
+	// 	margin-top: 2rem;
+	// 	margin-bottom: 2rem;
+	// 	margin-left: 2rem;
+
+	// 	border-left: 0.1rem solid gray;
+	// }
+}

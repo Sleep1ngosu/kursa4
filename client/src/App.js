@@ -15,6 +15,9 @@ import Collections from './components/Collections/Collections'
 import MyCollections from './components/MyCollections/MyCollections'
 import Settings from './components/Settings/Settings'
 import NotFound from './components/NotFound/NotFound'
+import Collection from './components/Collection/Collection'
+import CreateCollection from './components/CreateCollection/CreateCollection'
+import Blocker from './components/Blocker/Blocker'
 
 function App() {
 	useEffect(() => {
@@ -23,15 +26,20 @@ function App() {
 
 	return (
 		<Router>
-			<Header />
-			<Switch>
-				<Route path="/news" component={News} />
-				<Route path="/profile" component={Profile} />
-				<Route path="/collections/:id" component={Collections} />
-				<Route path="/my_collections" component={MyCollections} />
-				<Route path="/settings" component={Settings} />
-				<Route path="*" component={NotFound} />
-			</Switch>
+			<div className="app__wrapper">
+				<CreateCollection />
+				<Blocker />
+				<Header />
+				<Switch>
+					<Route path="/news" component={News} />
+					<Route path="/profile" component={Profile} />
+					<Route path="/collections/:id" component={Collections} />
+					<Route path="/my_collections" component={MyCollections} />
+					<Route path="/settings" component={Settings} />
+					<Route path="/collection" component={Collection} />
+					<Route path="*" component={NotFound} />
+				</Switch>
+			</div>
 		</Router>
 	)
 }

@@ -21,7 +21,6 @@ export const loading = () => async (dispatch) => {
 		setAuthToken(token)
 		const URI = '/api/user'
 		const response = await axios.get(URI)
-		// console.log(response)
 		dispatch({
 			type: LOADING_SUCCESS,
 			payload: {

@@ -6,7 +6,6 @@ import AuthenticatedHeader from './containers/AuthenticatedHeader/AuthenticatedH
 
 const Header = (props) => {
 	let renderedHeader = null
-	console.log(props.isAuthenticated)
 	props.isAuthenticated
 		? (renderedHeader = <AuthenticatedHeader />)
 		: (renderedHeader = <NotAuthenticatedHeader />)

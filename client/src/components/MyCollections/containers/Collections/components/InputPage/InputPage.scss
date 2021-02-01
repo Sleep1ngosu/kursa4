@@ -1,0 +1,19 @@
+.myCollections__pages {
+	&__inputPage {
+		width: 10rem;
+		height: 3rem;
+		outline: none;
+		padding-left: 1rem;
+		border: none;
+
+		&__wrapper {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			grid-column-start: 2;
+			grid-column-end: 3;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

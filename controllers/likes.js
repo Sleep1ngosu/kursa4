@@ -1,5 +1,6 @@
 const errorMessagesHandler = require('../errorHandle/errorMessagesHandler')
 const Collection = require('../models/Collection')
+const { validationResult } = require('express-validator')
 
 module.exports = {
 	toggleLike: async (req, res, next) => {
@@ -10,6 +11,10 @@ module.exports = {
 		const { username, id } = req.body
 		try {
 			let collection = await Collection.findOne({ id })
+			if (!collection)
+				return res
+					.status(404)
+					.json({ message: 'collections is not found' })
 			let index,
 				isExist = false
 			let likes = collection.likes

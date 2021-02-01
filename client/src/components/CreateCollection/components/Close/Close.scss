@@ -1,0 +1,15 @@
+.createCollection__close {
+	display: flex;
+	justify-self: center;
+	align-items: center;
+	position: absolute;
+	right: 4rem;
+	top: 2rem;
+	width: 3.5rem;
+	height: 3.5rem;
+	cursor: pointer;
+
+	&__icon {
+		width: 3.5rem;
+	}
+}

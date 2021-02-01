@@ -1,0 +1,38 @@
+.myCollections {
+	&__pages {
+		display: grid;
+		grid-template-columns: 3fr 1fr 1fr 3fr;
+		grid-template-rows: 1fr;
+
+		&__button {
+			width: 4rem;
+			height: 3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			background-color: #ece2d8;
+			padding-left: 2rem;
+			outline: none;
+
+			&__icon {
+				width: 2rem;
+				cursor: pointer;
+			}
+
+			&__text {
+				padding-left: 1rem;
+				font-family: 'Lato', sans-serif;
+				font-size: 1.3rem;
+			}
+
+			&__wrapper {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+			}
+		}
+	}
+}

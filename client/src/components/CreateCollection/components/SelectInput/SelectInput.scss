@@ -1,0 +1,39 @@
+.createCollection__selectInput {
+	&__wrapper {
+		position: relative;
+		width: 30rem;
+		height: 5rem;
+		background-color: #fff;
+		border-radius: 3rem;
+	}
+	&__input {
+		width: 30rem;
+		height: 5rem;
+		background-color: #fff;
+		outline: none;
+		border: none;
+		padding-left: 2rem;
+		font-size: 1.8rem;
+		font-family: 'Lato', sans-serif;
+		color: #504b4b;
+		border-radius: 3rem;
+	}
+	&__container {
+		// opacity: 0;
+		cursor: pointer;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+		width: 4rem;
+		height: 4rem;
+	}
+	&__select {
+		cursor: pointer;
+		width: 10rem;
+		border-radius: 2rem;
+	}
+}

@@ -1,0 +1,16 @@
+.myCollections__pages {
+	&__next {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 2rem;
+		padding-bottom: 1rem;
+		grid-column-start: 4;
+		grid-column-end: 5;
+
+		&__icon {
+			width: 4rem;
+			cursor: pointer;
+		}
+	}
+}
